@@ -1,0 +1,247 @@
+WEBVTT
+
+00:01.060 --> 00:06.700
+In the previous video we saw what will be done in part one of this course.
+
+00:06.910 --> 00:12.310
+That being said, as the name suggests, there will be a part two to this course.
+
+00:12.520 --> 00:18.970
+So in part two, let me show you what enhancements we will be doing and what are things that you should
+
+00:18.970 --> 00:21.040
+look for with part one.
+
+00:21.040 --> 00:24.240
+The business requirement was not that detailed.
+
+00:24.250 --> 00:29.740
+All they wanted was list all the products and submit an inquiry in an email.
+
+00:30.040 --> 00:33.520
+But with part two, the requirements have changed.
+
+00:33.790 --> 00:38.320
+What they want now is they want a complete order management system.
+
+00:38.320 --> 00:45.820
+The orders will only be placed by admin users and that is because with paving companies, customers
+
+00:45.820 --> 00:47.290
+do not place the order.
+
+00:47.320 --> 00:54.670
+They either go in the store, select stone or they call admin and they place the order for square feet.
+
+00:54.880 --> 01:01.550
+So customer side of the website remains the same, but admin has completely changed.
+
+01:01.550 --> 01:05.720
+For part two, let's log in as an admin user.
+
+01:06.320 --> 01:13.220
+When we go to log in, you see the page registration has changed and we also have Facebook login.
+
+01:13.760 --> 01:19.310
+That being said, let me log in using the admin user with content management.
+
+01:19.340 --> 01:22.550
+Now we see order and inquiry management.
+
+01:22.580 --> 01:28.280
+Before we dive into these concepts, let's try to place an order and see what's different.
+
+01:28.580 --> 01:34.190
+So now if admin registers, they have a square feet that they have to enter.
+
+01:34.780 --> 01:40.480
+So we'll enter five square feet add and let's add one more product to the cart.
+
+01:40.690 --> 01:46.930
+We have sweet notifications here which displays the task has been completed successfully.
+
+01:47.520 --> 01:54.570
+Then if we go on shopping cart in our shopping cart, admin can update the square feet if they want.
+
+01:54.780 --> 01:57.570
+Based on that, the price will be updated.
+
+01:58.020 --> 02:04.980
+Admin can hit continue here and they have to enter details of the user who wants the order.
+
+02:09.240 --> 02:15.600
+They will enter the customer details, make sure the summary looks good and they need to enter the credit
+
+02:15.600 --> 02:17.160
+card for the customer.
+
+02:17.400 --> 02:24.990
+Here we are using Braintree for credit card processing, so we will enter the credit card for Braintree,
+
+02:25.230 --> 02:29.190
+a valid expiration date and we'll hit the submit order.
+
+02:29.840 --> 02:36.620
+With that, we have the same inquiry confirmation view, but now we see order created and order number
+
+02:36.620 --> 02:37.970
+is being displayed.
+
+02:38.760 --> 02:42.060
+So with this order has been placed successfully.
+
+02:42.480 --> 02:48.780
+That being said, if you recall in part one, we were submitting the inquiries, but we were not storing
+
+02:48.780 --> 02:49.290
+them.
+
+02:49.470 --> 02:54.150
+Now we will also store all the inquiries that any user submits.
+
+02:54.420 --> 03:01.890
+Then in the saved inquiry admin can come directly here, click on edit and they can convert it to Cart.
+
+03:01.890 --> 03:08.740
+And all the four products that are there in this inquiry will be added to their shopping cart here.
+
+03:08.760 --> 03:15.030
+Then admin can change the square feet based on how they want it and they can hit continue and we'll
+
+03:15.030 --> 03:16.650
+see the summarize total.
+
+03:16.920 --> 03:24.060
+The thing that is different in inquiry is name, phone number and email gets populated automatically
+
+03:24.060 --> 03:27.280
+for the user who submitted the inquiry.
+
+03:27.300 --> 03:29.940
+These are not the details about admin.
+
+03:29.970 --> 03:33.990
+These details are about the user who created the inquiry.
+
+03:34.730 --> 03:36.170
+Then it's the same thing.
+
+03:36.170 --> 03:40.130
+They can enter the credit card and place order for the customer.
+
+03:40.340 --> 03:47.390
+Then we go to order here and we have order management screen and we have the filterings that user can
+
+03:47.390 --> 03:47.960
+do.
+
+03:48.170 --> 03:53.270
+They can tweak things based on the order status and however they want.
+
+03:53.900 --> 03:55.490
+Inside order management.
+
+03:55.490 --> 03:58.130
+What we are using here is sync fusion.
+
+03:58.400 --> 04:05.300
+We have few functionalities that are available right out of the box with sync fusion, but what advantage
+
+04:05.300 --> 04:12.980
+this brings as compared to data tables inside inquiry is that if you have 10,000 or 100,000 records
+
+04:13.010 --> 04:17.030
+loading, all of them will make your website really slow.
+
+04:17.180 --> 04:24.260
+If you go to the order here with Sync Fusion, you can add filter clauses to make sure you do not populate
+
+04:24.260 --> 04:26.030
+all the data at once.
+
+04:26.060 --> 04:29.360
+You can only populate the data that you want.
+
+04:29.980 --> 04:32.230
+So that is one advantage there.
+
+04:32.230 --> 04:37.540
+And Syncfusion has many other controls you can use there, other controls.
+
+04:37.540 --> 04:42.640
+But I will explain you how to configure Syncfusion in your project.
+
+04:43.240 --> 04:50.560
+Then if we scroll down, we have the pagination and if admin goes into any of the details here, they
+
+04:50.560 --> 04:56.410
+can update the order details for the customer or they can start processing of the order.
+
+04:56.650 --> 04:58.840
+The order ID here is nine.
+
+04:58.840 --> 05:03.940
+So once we hit start processing we have the order is in process alert.
+
+05:03.970 --> 05:09.100
+If we go on the next screen for order nine, the status is processing.
+
+05:09.280 --> 05:14.620
+If we go in details now next status that is available is shipped the order.
+
+05:15.100 --> 05:20.320
+Once they hit ship the order, then the order will be successfully completed.
+
+05:20.470 --> 05:27.290
+So if we go here, the order has been shipped and the only option that is available now is cancel order.
+
+05:27.310 --> 05:29.140
+If something goes wrong.
+
+05:29.810 --> 05:31.010
+With cancel order.
+
+05:31.010 --> 05:35.510
+We have to make sure that we need to provide refund to the customer as well.
+
+05:35.930 --> 05:43.250
+So when you hit cancel order, it will not only update the status to cancelled, but it will also refund
+
+05:43.250 --> 05:44.090
+the order.
+
+05:44.570 --> 05:50.960
+We will see all of these transactions in real time and see the status of the transactions.
+
+05:51.380 --> 05:55.580
+This is just the overview of the functionality of the application.
+
+05:55.580 --> 05:58.410
+But part two is not just about that.
+
+05:58.430 --> 06:02.480
+When we will be adding so many new features to our website.
+
+06:02.510 --> 06:05.120
+This is not a small scale website anymore.
+
+06:05.300 --> 06:11.720
+So the main thing that we'll be focusing on is architecting our website, the correct way, implementing
+
+06:11.720 --> 06:16.720
+repository pattern and how to make sure that your website is scalable.
+
+06:16.730 --> 06:23.120
+If you have to convert it from a small scale to large scale, that task is not easy.
+
+06:23.150 --> 06:29.850
+You will face many errors there, but I will show you everything on how to resolve and architect the
+
+06:29.850 --> 06:31.350
+website correctly.
+
+06:31.650 --> 06:38.460
+So I hope you are as excited as I am with this course and I hope to see you in the part two of this
+
+06:38.460 --> 06:39.630
+course as well.

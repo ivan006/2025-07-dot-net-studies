@@ -1,0 +1,97 @@
+WEBVTT
+
+00:01.400 --> 00:01.820
+Next.
+
+00:01.820 --> 00:06.860
+What we want to see here is we have a folder called w w, w Root.
+
+00:07.640 --> 00:12.500
+This folder has been created since we selected the MVC application.
+
+00:12.950 --> 00:19.370
+In here, if you expand this, there are more folders that has static files for our application.
+
+00:19.730 --> 00:25.640
+Static files could be CSS, JavaScript or any of the third party libraries.
+
+00:26.630 --> 00:30.980
+You can also have images here or HTML templates.
+
+00:31.720 --> 00:39.430
+If you remember in Startup.cs, if we go there, we added a middleware use static files and that was
+
+00:39.430 --> 00:46.360
+added so that the application can use the static files that we add inside W.w.w root.
+
+00:46.990 --> 00:54.250
+This W.w.w root folder will be the root folder in application for all static files.
+
+00:54.460 --> 00:58.480
+None of the C sharp files will be placed in this folder.
+
+00:58.810 --> 01:04.210
+This folder is only meant to serve all the static files for our application.
+
+01:05.020 --> 01:12.100
+So we'll be using the static files folder extensively throughout the course when we have to add images
+
+01:12.100 --> 01:18.160
+or we want to add any class libraries or we want to modify external CSS.
+
+01:18.640 --> 01:23.680
+Once we have that, the last thing that we have is launch Settings.json.
+
+01:24.460 --> 01:32.140
+Launch Settings.json is inside the properties folder and if we double click it displays different profile
+
+01:32.140 --> 01:34.450
+in which we can run the application.
+
+01:35.020 --> 01:41.710
+Like here, if the profile is IIS express, it sets the environment variable for that profile to be
+
+01:41.710 --> 01:42.700
+development.
+
+01:43.330 --> 01:51.220
+This way you can configure more profiles that you want with the URL as a support and other functionalities.
+
+01:51.760 --> 01:57.580
+Also, when we will run the application right here, we will be seeing all the profiles that we have
+
+01:57.580 --> 02:00.220
+set up inside the launch settings.
+
+02:00.430 --> 02:05.510
+So right here you can see IIS express and we have the rocky profile URL.
+
+02:06.020 --> 02:11.690
+If you want to modify them, you can modify here directly or you can also do the same.
+
+02:11.690 --> 02:14.090
+If you right click here and here.
+
+02:14.090 --> 02:19.340
+If you go to the properties, we will be having those profiles in the debug tab.
+
+02:19.460 --> 02:24.110
+So right here you see IIS Express as well as Rocky.
+
+02:24.140 --> 02:29.840
+We can set the browser URL and we can set the environment variables that we want.
+
+02:29.870 --> 02:36.560
+Here we have the other settings which you can set from that page or we can do in the launch settings
+
+02:36.560 --> 02:37.610
+dot Json.
+
+02:38.030 --> 02:42.500
+Now we won't be tweaking this much because this is more related to deployment.
+
+02:42.500 --> 02:48.650
+And if you want to add more environment variable for like staging another environment, but we'll just
+
+02:48.650 --> 02:51.080
+keep it with the basic for this course.

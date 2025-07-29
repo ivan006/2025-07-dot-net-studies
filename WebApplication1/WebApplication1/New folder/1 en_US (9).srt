@@ -1,0 +1,85 @@
+WEBVTT
+
+00:00.260 --> 00:05.780
+Hi guys, and welcome to the ASP.Net Core MVC up and running course.
+
+00:05.930 --> 00:09.260
+This will be part one of the two courses.
+
+00:09.410 --> 00:13.760
+My name is Brogan and I will be your instructor for this course.
+
+00:14.120 --> 00:22.700
+In this course, we will focus on the basics of ASP.Net Core MVC as we will start building real world
+
+00:22.700 --> 00:23.840
+application.
+
+00:24.610 --> 00:32.830
+That being said, we will dive into some intermediate concepts in ASP.Net Core MVC as we will work through
+
+00:32.830 --> 00:33.730
+the course.
+
+00:34.420 --> 00:40.660
+Before you take this course, you should be familiar with the basics of C Sharp and SQL.
+
+00:40.930 --> 00:46.150
+I would say about six months of experience with both should be sufficient.
+
+00:46.750 --> 00:53.530
+That being said, let's take an overview of what are the basic topics that will be covered in this course.
+
+00:53.950 --> 01:02.290
+We will start with the basic foundation of ASP.Net Core MVC project as we will explore files and folder
+
+01:02.290 --> 01:09.520
+structure with the basic concepts like middleware, pipeline routing and much more.
+
+01:10.180 --> 01:15.610
+Then we will be pushing models to database using entity framework core.
+
+01:16.480 --> 01:25.750
+After that, our first task will be to perform Crud operations using ASP.Net Core, MVC and Entity Framework
+
+01:25.750 --> 01:26.380
+Core.
+
+01:27.100 --> 01:34.120
+Once we build a good foundation with the basics, we will dive into more advanced topics like session
+
+01:34.120 --> 01:39.130
+forms, view data, view back validations and much more.
+
+01:39.610 --> 01:48.130
+We will be adding security to our project and for that we will be adding ASP.Net Identity Razor class
+
+01:48.130 --> 01:55.120
+library to the project manually and we will see how we have to configure the changes.
+
+01:55.810 --> 01:59.920
+We will add multiple roles in our website and much more.
+
+02:00.670 --> 02:08.800
+Finally, as our real world application evolves, we will see how to send email and use email templates
+
+02:09.760 --> 02:12.130
+along with all the topics we cover.
+
+02:12.160 --> 02:16.870
+One of the most important topic is assignments and error solving.
+
+02:17.470 --> 02:25.030
+I try to show the most common errors that you face while building a net core project and how to resolve
+
+02:25.130 --> 02:29.270
+these errors along with plenty of handfull assignments.
+
+02:29.960 --> 02:33.830
+That being said, we have lots of exciting things in this course.
+
+02:33.830 --> 02:40.700
+But first let me show you the demo of the application that we will be building in this course in the
+
+02:40.700 --> 02:41.810
+next video.

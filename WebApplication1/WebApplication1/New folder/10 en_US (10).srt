@@ -1,0 +1,154 @@
+WEBVTT
+
+00:01.360 --> 00:02.500
+In this video.
+
+00:02.500 --> 00:08.590
+Before we take a look at the other files, I will introduce you to a new concept, which is dependency
+
+00:08.590 --> 00:09.580
+injection.
+
+00:10.180 --> 00:15.940
+ASP.Net Core implements a simple built in dependency injection container.
+
+00:16.450 --> 00:22.180
+Dependency injection is an integral part of ASP.Net Core architecture.
+
+00:22.620 --> 00:31.480
+Dotnet Core injects objects of dependency classes through constructor by using the built in IOC container.
+
+00:32.320 --> 00:38.980
+That being said, let me try to explain in simple words what dependency injection is and what benefit
+
+00:38.980 --> 00:40.060
+it brings.
+
+00:40.480 --> 00:44.230
+Let's consider a scenario without dependency injection.
+
+00:44.620 --> 00:51.760
+So in any application, let's say we have three pages right now and we have some common functionality
+
+00:51.760 --> 00:57.640
+that we want to use across all the three pages like email and database access.
+
+00:57.940 --> 01:03.380
+Now let's imagine that on all of these pages, we need access to database first.
+
+01:03.710 --> 01:09.950
+So what we will do is we will create the database object on all the three pages, and in our case,
+
+01:09.950 --> 01:11.930
+we'll call the class name as DB.
+
+01:13.340 --> 01:19.370
+Then we'll have to do the same and create object of the email implementation that we have in all the
+
+01:19.370 --> 01:22.370
+three pages for the email class.
+
+01:22.760 --> 01:29.450
+Now consider a scenario What happens if in future you change the implementation of how you access the
+
+01:29.450 --> 01:36.620
+database or email based on the current configuration, You might have to make changes in all the three
+
+01:36.620 --> 01:39.260
+pages, which is a big mess.
+
+01:39.980 --> 01:47.360
+Another issue here is on each page you have to deal with creating the object, managing them as well
+
+01:47.360 --> 01:54.260
+as disposing them, and that would consume time in each and every page, which is a bad approach.
+
+01:54.950 --> 01:59.330
+So that being said, what is a solution to avoid all of this?
+
+01:59.660 --> 02:04.740
+The answer is dependency injection with dependency injection.
+
+02:04.750 --> 02:08.200
+Let's first see how this scenario would look like.
+
+02:08.740 --> 02:16.060
+We will again have all the three pages and the email and database functionality here, along with all
+
+02:16.060 --> 02:17.650
+the things that we had before.
+
+02:17.650 --> 02:22.300
+We will have something new, which is a dependency injection container.
+
+02:23.110 --> 02:30.070
+Then we will have the email and database functionality, but rather than having them in just classes,
+
+02:30.070 --> 02:34.240
+we will also have an interface for email and database.
+
+02:34.780 --> 02:42.670
+Then our classes will be implementing those interface and we will register the interfaces in our dependency
+
+02:42.670 --> 02:45.610
+injection container as you can see.
+
+02:45.940 --> 02:53.200
+So we will tell dependency injection container that email is an interface and email is implementation
+
+02:53.200 --> 02:54.730
+of that interface.
+
+02:55.210 --> 03:01.570
+When any page will need to access these functionalities, it will just ask the dependency injection
+
+03:01.570 --> 03:08.570
+container to create object of this functionality and directly give us the object to use.
+
+03:08.780 --> 03:16.520
+So inside the page we will actually be using interfaces and then dependency injection does all its magic
+
+03:16.520 --> 03:19.880
+of passing the object when the website needs it.
+
+03:20.150 --> 03:26.240
+That way we do not have to deal with creating the object, disposing or managing that object inside
+
+03:26.240 --> 03:27.380
+our pages.
+
+03:27.500 --> 03:34.700
+Our pages will look very clean with just the interface and all the instance and implementation will
+
+03:34.700 --> 03:37.760
+be done by the dependency injection container.
+
+03:38.930 --> 03:45.140
+Now, in future, if you want to change or replace the email class, you do not have to make any change
+
+03:45.140 --> 03:46.430
+in the pages.
+
+03:46.640 --> 03:53.210
+All you have to do is you just need to change the implementation that you do in the dependency injection
+
+03:53.210 --> 03:55.820
+container in one location.
+
+03:56.330 --> 04:03.260
+Also, as I have said before, creating and disposing object is now the responsibility of the built
+
+04:03.260 --> 04:11.000
+in dependency injection container and we do not have to worry about it anymore, which is a great relief.
+
+04:11.570 --> 04:18.680
+So you can see that there are lots of advantages that dependency injection brings to the architecture.
+
+04:19.310 --> 04:24.860
+That being said, with Dotnet core, we have the built in dependency injection container.
+
+04:25.190 --> 04:30.920
+Now how do we register this dependencies or where do we register these dependencies?
+
+04:30.950 --> 04:34.370
+Let's understand a part of that in the next video.

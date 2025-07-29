@@ -1,0 +1,28 @@
+WEBVTT
+
+00:01.020 --> 00:05.670
+In this video, I want to introduce you to Appsettings.json.
+
+00:06.150 --> 00:12.060
+This is the file in which we will be adding all of the connection, strings and static files like secrets
+
+00:12.060 --> 00:15.120
+that we want in a production application.
+
+00:15.120 --> 00:22.020
+You can move this to vaults or secrets, but we'll be using Appsettings for this course here.
+
+00:22.020 --> 00:26.790
+Right now we see the logging and in that we have some things that have been configured.
+
+00:27.090 --> 00:33.660
+We will be adding connection strings along with other things in this course inside the app settings,
+
+00:34.050 --> 00:40.170
+whenever there are any keys or anything that we want to use throughout the course, it is a great place
+
+00:40.170 --> 00:41.970
+to store them right here.
+
+00:42.900 --> 00:49.050
+That being said, we'll come back to this file and we'll be adding new things in the upcoming videos.

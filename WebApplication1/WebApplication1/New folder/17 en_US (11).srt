@@ -1,0 +1,151 @@
+WEBVTT
+
+00:01.020 --> 00:07.350
+Now before I run the application and show you routing in detail, let's take a look at the folders that
+
+00:07.350 --> 00:10.740
+we have with model views and controllers.
+
+00:11.420 --> 00:17.720
+So right here we have a home controller, and in the model we have the error view model.
+
+00:17.960 --> 00:24.830
+Whenever we'll be adding new models or if we want to add a new table in the database, we will be adding
+
+00:24.830 --> 00:26.960
+models inside this folder.
+
+00:27.610 --> 00:32.590
+Controller, as we know, is the heart of the application in controller.
+
+00:32.590 --> 00:36.640
+If you expand this, you see there are many of the functions.
+
+00:36.760 --> 00:40.150
+These are known as individual action method.
+
+00:40.810 --> 00:43.600
+So a controller has action method.
+
+00:43.630 --> 00:50.110
+If we go back to the routing template that we had, we had the controller name and the action name.
+
+00:50.710 --> 00:58.270
+So what means is if someone calls index, then they can call it home forward slash index and the control
+
+00:58.270 --> 01:02.560
+will hit this breakpoint when the URL is submitted.
+
+01:02.740 --> 01:06.970
+And once the control gets here, we are just returning back the View.
+
+01:07.000 --> 01:12.730
+So this view will be inside the views folder and inside the home folder.
+
+01:12.910 --> 01:16.780
+The folder name will match exactly as the controller name.
+
+01:16.930 --> 01:24.190
+So it will look for an index view inside the home folder, inside views, and that will correspond to
+
+01:24.190 --> 01:27.130
+the action method that we see right here.
+
+01:27.830 --> 01:33.170
+So what we have in the index view is if you open it, we have a title.
+
+01:33.200 --> 01:34.940
+We have welcome here.
+
+01:34.940 --> 01:39.440
+And then we have learned about building web apps with ASP.Net Core.
+
+01:40.100 --> 01:44.060
+Let's run this and make sure that this is actually working.
+
+01:44.240 --> 01:48.230
+So let's run our application for the first time and create.
+
+01:48.260 --> 01:50.300
+We see that page is loaded.
+
+01:50.750 --> 01:55.490
+Now, right here in the URL, we do not see any controller or action name.
+
+01:55.730 --> 02:02.060
+And the reason is, if we go back to the application in startup, we configured the default to home
+
+02:02.060 --> 02:03.920
+controller index action.
+
+02:04.370 --> 02:10.820
+So that being said, if you add a debugging point right here and if you go back and press enter, you
+
+02:10.820 --> 02:13.160
+will see that it hits this breakpoint.
+
+02:13.310 --> 02:18.590
+So it is actually calling the index action method inside your home controller.
+
+02:19.220 --> 02:23.420
+That being said, let's continue here and the view is loaded.
+
+02:23.570 --> 02:26.360
+Now, what will happen when we click privacy?
+
+02:26.720 --> 02:33.440
+You can see in the URL on the bottom here it is going to home controller and privacy action method.
+
+02:33.860 --> 02:40.550
+So right here inside home controller, we have the privacy action method, which just returns back a
+
+02:40.550 --> 02:41.150
+view.
+
+02:41.540 --> 02:44.480
+That view will again be inside views home.
+
+02:44.480 --> 02:49.700
+And we have the privacy view and this is what we should see when we click that.
+
+02:50.300 --> 02:52.430
+Let's go back and click here.
+
+02:52.460 --> 02:57.290
+Now you can see the control is getting to the privacy action method.
+
+02:57.290 --> 03:01.700
+And if you hit continue, the privacy view will be loaded.
+
+03:02.510 --> 03:03.020
+Great.
+
+03:03.020 --> 03:06.260
+So we can see how routing is working so far.
+
+03:06.410 --> 03:13.460
+Right now we do not have any ID, Even if you add an ID, it will still load the privacy because ID
+
+03:13.460 --> 03:14.630
+is optional.
+
+03:14.810 --> 03:18.380
+So if you have it or if you do not, that doesn't matter.
+
+03:18.800 --> 03:25.730
+So with this routing is making a little bit more sense on how the controllers and view routing works.
+
+03:26.000 --> 03:32.480
+One thing you should always remember is if your name is home controller, you should have a folder within
+
+03:32.480 --> 03:39.260
+the view with the name home, and in there you will add all the views corresponding to the action methods
+
+03:39.260 --> 03:41.240
+inside the home controller.
+
+03:41.360 --> 03:45.830
+That being said, right here, there are few more views that I want to explain you.
+
+03:45.860 --> 03:48.170
+Let me do that in the next video.

@@ -1,0 +1,85 @@
+WEBVTT
+
+00:00.960 --> 00:07.440
+We had to take a detour to understand dependency injection before we understand the next file, which
+
+00:07.440 --> 00:09.090
+is startup right here.
+
+00:09.690 --> 00:16.800
+You can right click here and go to the definition, or you can open up the startup file from here itself.
+
+00:16.890 --> 00:24.000
+Now, startup class, as you can see, is a basic class with no extensions or implementations of interface.
+
+00:24.120 --> 00:29.100
+But the first thing that you notice if you scroll down is that there are two methods.
+
+00:29.400 --> 00:34.860
+The first one is the configure services and the next one is the configure method.
+
+00:35.310 --> 00:40.620
+Both of these methods are invoked automatically by ASP.Net Core.
+
+00:41.130 --> 00:44.250
+Configure services gets called first.
+
+00:44.580 --> 00:51.480
+We will be registering all the dependencies with dependency injection container that is built in in
+
+00:51.480 --> 00:55.240
+ASP.Net Core within the configure services.
+
+00:55.260 --> 01:02.860
+So that is why I wanted to introduce you to dependency injection in the previous video, because configure
+
+01:02.860 --> 01:07.930
+services is the place where you do the registration of your service.
+
+01:08.320 --> 01:15.280
+If we switch back to the PowerPoint, the step that we do when we register our email and database with
+
+01:15.280 --> 01:21.730
+interface as well as the implementation, that is the step that we will do inside configure services
+
+01:21.730 --> 01:22.510
+method.
+
+01:22.630 --> 01:29.620
+So inside the configure services method, we can add services to the collection of services.
+
+01:30.190 --> 01:37.420
+Services are basically any functionality that you want to register so other parts of application can
+
+01:37.420 --> 01:38.260
+use it.
+
+01:38.380 --> 01:42.400
+As we saw, it could be email database and much more.
+
+01:42.820 --> 01:49.990
+We will be registering the services provided by the Dotnet core framework as well as custom services
+
+01:49.990 --> 01:51.520
+that we will create.
+
+01:51.910 --> 01:58.570
+As of now, you can see right here we just have one services which is add controllers with views.
+
+01:58.570 --> 02:03.670
+And with this we register MVC service to our application.
+
+02:04.300 --> 02:06.970
+We will be adding more services here.
+
+02:06.970 --> 02:13.240
+But before we dive into MVC in the next video, let's understand the configure method.
+
+02:13.690 --> 02:20.560
+But remember that configure services method gets called by the runtime and we use this method to add
+
+02:20.560 --> 02:22.570
+services to our container.
+
+02:23.110 --> 02:26.320
+That being said, let's continue in the next video.

@@ -1,0 +1,199 @@
+WEBVTT
+
+00:01.380 --> 00:03.240
+Inside the configure method.
+
+00:03.240 --> 00:07.590
+We have seen the use routing as well as use endpoints.
+
+00:07.800 --> 00:13.050
+That being said, we haven't seen the actual MVC routing and how that works.
+
+00:13.420 --> 00:18.000
+Endpoint routing has been introduced in ASP.Net Core three.
+
+00:18.270 --> 00:26.460
+In the initial version of ASP.Net Core, routing was a part of MVC, but it has been separated out to
+
+00:26.460 --> 00:30.870
+make routing available to all the Middlewares and not just MVC.
+
+00:31.320 --> 00:38.610
+Whenever a request comes in, it hits an endpoint and that endpoint is processed by the middleware.
+
+00:38.970 --> 00:45.840
+Before we get into those details, let me switch to presentation and I can give you an example of routing.
+
+00:46.410 --> 00:51.270
+The URL pattern for routing is considered after the domain name.
+
+00:51.450 --> 00:57.720
+So in this case it will be after localhost and the port number, which is five, five, five five.
+
+00:58.350 --> 01:06.310
+Then in the example URL that we have, we see category forward slash index, forward slash three.
+
+01:06.820 --> 01:12.730
+In an MVC application, the first thing that you will see will be the name of the controller.
+
+01:13.210 --> 01:17.650
+After that, we will have the name of the action followed by the ID.
+
+01:18.100 --> 01:21.790
+Also keep in mind that ID is an optional field.
+
+01:21.940 --> 01:27.970
+Some of these fields can be optional and if they are not present, it will take the default value.
+
+01:28.060 --> 01:33.640
+Like if an action name is missing, it will default the action name to be index.
+
+01:34.420 --> 01:40.420
+You can change the defaults if you want, but if we switch back to our application and if we see the
+
+01:40.420 --> 01:46.840
+endpoint that we are using, we have a default pattern in which we have the controller name defaulted
+
+01:46.840 --> 01:54.040
+to home action name defaulted to index, and we have an ID property which is optional.
+
+01:54.520 --> 01:58.660
+So with that in place, let's try to see some more examples here.
+
+01:58.840 --> 02:03.790
+The first example we have forward slash category, forward slash index.
+
+02:03.790 --> 02:09.040
+So in that case category will be the controller index will be the action.
+
+02:09.070 --> 02:13.570
+We do not have anything for the ID, so ID will be null.
+
+02:14.500 --> 02:17.260
+Next, what we have is only category.
+
+02:17.440 --> 02:24.820
+In that case the controller will be category controller and action will be defaulted to index action.
+
+02:24.970 --> 02:28.030
+And if no ID is present, it will be null.
+
+02:28.660 --> 02:33.490
+Then we have category forward slash edit forward slash three.
+
+02:33.730 --> 02:35.680
+We have all the fields here.
+
+02:35.710 --> 02:42.550
+Controller will be category and it will be the action and id will be three.
+
+02:43.300 --> 02:48.790
+In the last example, we have product forward slash details, forward slash three.
+
+02:49.150 --> 02:51.700
+Again, we have all the three entities.
+
+02:51.730 --> 02:58.240
+Controller will be the product action will be details and ID will be three.
+
+02:58.510 --> 03:06.430
+Now in MVC there is a route table which tries to match end points to find out where to pass the request
+
+03:06.820 --> 03:08.500
+to be on track here.
+
+03:08.500 --> 03:15.580
+If we have a URL like this in MVC, home would point to a controller and index would point to an action
+
+03:15.580 --> 03:18.250
+method as we saw in the last slide.
+
+03:18.700 --> 03:23.950
+Now, if you are not aware about what is a controller, what is an action method?
+
+03:24.070 --> 03:25.870
+Do not worry right now.
+
+03:25.870 --> 03:29.230
+Just understand that this is one way of routing.
+
+03:29.350 --> 03:38.910
+We will be getting into MVC details very shortly, but ASP.Net Core is now more than just an MVC application.
+
+03:38.920 --> 03:42.460
+It can also have razor pages and SignalR.
+
+03:42.940 --> 03:48.220
+That being said, it is possible to have all three in a single application.
+
+03:48.730 --> 03:53.800
+All of these technologies have middlewares that register endpoints.
+
+03:54.310 --> 04:01.930
+So if we switch back to our application right here, we see a middleware of use routing in Startup.cs.
+
+04:01.930 --> 04:05.490
+So let's imagine at some point we hit this middleware.
+
+04:05.500 --> 04:10.240
+At this point, the request will inspect all of the registered endpoints.
+
+04:10.270 --> 04:15.100
+They can be endpoints registered by MVC or any other technology.
+
+04:15.340 --> 04:21.670
+It determines whether it should send the request to MVC or any other technology.
+
+04:22.240 --> 04:28.780
+Then for all the middlewares that will be executed after this, we will know that endpoint has been
+
+04:28.780 --> 04:32.620
+selected like MVC or Razor pages.
+
+04:33.070 --> 04:41.050
+And then later on, when it hits the endpoint in the use endpoints, we will register the endpoint and
+
+04:41.050 --> 04:47.740
+then when the request arrives, at this point it will be processed by the endpoint that was selected
+
+04:47.740 --> 04:49.100
+in use routing.
+
+04:49.120 --> 04:56.560
+So in the expression we have the endpoints and we have an object for the options on this object, there
+
+04:56.560 --> 05:00.880
+are several extension methods that are available to register different.
+
+05:00.920 --> 05:05.040
+Endpoints like right here we are registering the MVC.
+
+05:05.550 --> 05:09.900
+Then we have other endpoints for Razor and SignalR as well.
+
+05:10.230 --> 05:17.040
+We will be adding razor endpoint later in the course and within the controller, which is the MVC,
+
+05:17.070 --> 05:19.440
+we have added a default pattern.
+
+05:19.440 --> 05:25.980
+So by default it will load the home controller and index action if nothing has been loaded.
+
+05:26.070 --> 05:33.780
+So here we also have registered a default route for MVC application, which has a controller name home
+
+05:33.780 --> 05:36.630
+and an action method called as index.
+
+05:37.440 --> 05:43.200
+This map controller route uses routing table to match against the request.
+
+05:43.620 --> 05:47.850
+This is the basic overview of routing middleware that we have.
+
+05:47.880 --> 05:54.630
+That being said, before I actually run the application and walk you through routing in demo, let me
+
+05:54.630 --> 06:01.080
+finish the overview of the other files and then we'll get back to routing and view it live in action.

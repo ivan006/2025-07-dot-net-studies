@@ -1,0 +1,49 @@
+WEBVTT
+
+00:01.000 --> 00:05.710
+Next important file that I want to show you is the Program.cs.
+
+00:05.860 --> 00:11.620
+Now, we won't be going through all the files in the same order, but I will be going through them in
+
+00:11.620 --> 00:14.890
+an order that will be easier for you to understand.
+
+00:15.550 --> 00:17.410
+The next file will be taking a look.
+
+00:17.440 --> 00:19.520
+Is the Program.cs.
+
+00:19.600 --> 00:23.650
+If we scroll down here, you will see that there is a main method.
+
+00:24.070 --> 00:31.720
+Main method is more common in console application, and the reason you see that here is initially Dotnet
+
+00:31.720 --> 00:35.710
+core application starts as a console application.
+
+00:35.980 --> 00:40.570
+The main method configures ASP.Net Core and starts it.
+
+00:41.110 --> 00:48.370
+The configuration is done by calling the create host builder and as you can see, this is a method in
+
+00:48.370 --> 00:57.430
+the program class which returns an object of a host builder on this object, build and run are called,
+
+00:57.430 --> 01:03.560
+and then onwards the application will become an ASP.Net Core application.
+
+01:04.190 --> 01:11.720
+The Create Host Builder calls Default Builder, which configures the web host using defaults.
+
+01:12.050 --> 01:17.210
+Also, you can see the web builder is configured using the startup file.
+
+01:17.660 --> 01:24.830
+Before we take a look at the startup file in detail, let's understand a core concept of ASP.Net Core,
+
+01:24.830 --> 01:26.960
+which is dependency injection.
